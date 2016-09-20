@@ -1,4 +1,4 @@
-#LSTM with residual connections
+#LSTM with residual connection
 A model to generate sanskrit text and learn reprenstations of sankrit aksharas. 
 
 Residual connection will aid in learning simple mappings, whereas LSTM cells learn complex relationships.
