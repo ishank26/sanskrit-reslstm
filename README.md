@@ -5,9 +5,7 @@ Residual connection will aid in learning simple mappings, whereas LSTM cells lea
 
 *Note: The model was trained using Chapter-7 of Mahabharata on Nvidia GeForce GT 730.*
 
-<center>
-![model](reslstm.png)
-</center>
+<img src="sanskrit-reslstm/reslstm.png" align="center" alt="model">
 
 ###Requirements:
 * Thenao
