@@ -85,7 +85,7 @@ X_train, y_train, train_char= prepareData('maha_lng.txt')
 
 
 ############ model params ################
-hidden_neurons = 256 # hidden neurons
+units = 256 # memory units
 batch = 128  #batch_size
 no_epochs= 59
 
@@ -128,9 +128,9 @@ lr_print=lr_printer()
 ############## build model ############
 model=Graph()
 model.add_input(input_shape=(seq_length, train_char), name='input')
-model.add_node(LSTM(hidden_neurons, return_sequences=True, init= 'orthogonal'), input='input', name='lstm1')
+model.add_node(LSTM(units, return_sequences=True, init= 'orthogonal'), input='input', name='lstm1')
 model.add_node(Dropout(0.5), input='lstm1', name='drop1')
-model.add_node(LSTM(hidden_neurons, return_sequences=True, init= 'orthogonal'), input='drop1', name='lstm2')
+model.add_node(LSTM(units, return_sequences=True, init= 'orthogonal'), input='drop1', name='lstm2')
 model.add_node(Dropout(0.5), input='lstm2', name='drop2')
 model.add_node(TimeDistributed(Dense(train_char, init= 'orthogonal')), input='drop2', name='fc1')
 model.add_node(Dropout(0.5), input='fc1', name='drop3')
