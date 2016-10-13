@@ -40,7 +40,7 @@ Residual connection[[1]](#resnet) in the model will aid in learning simple aksha
 `python reslstm.py`
 #### To use pretrained weights:
 * Remove layers weight intializations from layers.
-* Uncomment line 139 in reslstm.py and add with your weights.
+* Uncomment line 139 in reslstm.py and add your weights.
 * Fine-tuning: load given weights and add parameter *trainable = False* for layers which doesn't require fine-tuning.
 
 ####Citations:
