@@ -2,7 +2,7 @@
 A model to generate sanskrit text and learn reprenstations of sankrit aksharas(unit of graphemic symbols in the Indian writing system). 
 
 ### Hypothesis: 
-Sanskrit is a finely structured language. Minor variations in aksharas change the meaning of the words. Composition and translation of Sanskrit texts is still a challenging  task due to the semantic perplexity in those beautiful and rich verses. Refer to the following examples-
+Sanskrit is a finely structured language. Minor variations in aksharas change the meaning of the words. Composition and translation of Sanskrit texts is still a challenging  task due to the semantic perplexity in its beautiful and rich verses. Refer to the following examples-
 #### Pronouns-
 | विभक्ति – Cases | एकवचन – Singular | द्विवचन – Dual | बहुवचन – Plular |
 |:--------------:|:----------------:|:-------------:|:--------------:|
