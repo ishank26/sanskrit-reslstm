@@ -29,7 +29,7 @@ Residual connection[[1]](#resnet) in the model will aid in learning simple aksha
 *Note: This model was trained on Nvidia GeForce GT 730 using Chapter-7 of Mahabharata ~ 677972 characters. If you've more computation resources, you can use bigger training corpus.*
 
 <p align="center">
-<img src="reslstm.png">
+<img src="model.png">
 </p>
 
 ### Requirements:
