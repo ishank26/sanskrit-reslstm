@@ -24,7 +24,7 @@ in a rama - ***रामे***
 He sees.***
 
 
-Residual connection[[1]](#resnet) in the model will aid in learning simple aksharas mappings, whereas LSTM[[2]](#lstm) cells will learn complex relationships.
+Residual connection[[1]](#resnet) in the model will aid in learning simple aksharas mappings, whereas LSTM[[2]](#lstm) cells will learn complex relationships. 
 
 *Note: This model was trained on Nvidia GeForce GT 730 using Chapter-7 of Mahabharata ~ 677972 characters. If you've more computation resources, you can use bigger training corpus.*
 
@@ -39,9 +39,16 @@ Residual connection[[1]](#resnet) in the model will aid in learning simple aksha
 ### Usage:
 `python reslstm.py`
 #### To use pretrained weights:
-* Remove layers weight intializations from layers.
+* Remove layers weight intializations.
 * Uncomment line 139 in reslstm.py and add your weights.
 * Fine-tuning: load given weights and add parameter *trainable = False* for layers which doesn't require fine-tuning.
+
+#### Future Work:
+* The residual connection in this model, merges input vectors (binary  vectors) and dense layer features. One can implement element wise addition to check for improvemnts in feature representation with more data. 
+* Comapare Character level CNN and ResLSTM for Sanskrit language modeling tasks.
+* Apply stateful LSTM and compare.
+
+
 
 ####Citations:
 <a id="resnet">
@@ -50,3 +57,5 @@ Residual connection[[1]](#resnet) in the model will aid in learning simple aksha
 <a id="lstm">
 [2]Graves, A., & Schmidhuber, J. (2005). Framewise phoneme classification with bidirectional LSTM and other neural network architectures. Neural Networks, 18(5), 602-610.
 
+
+*Please feel free to contact me at ishak269[at]gmail.com to report any issues.*
