@@ -45,7 +45,7 @@ Residual connection[[1]](#resnet) in the model will aid in learning simple aksha
 
 #### Future Work:
 * The residual connection in this model, merges input vectors (binary  vectors) and dense layer features. One can implement element wise addition to check for improvemnts in feature representation with more data. 
-* Comapare Character level CNN and ResLSTM for Sanskrit language modeling tasks.
+* Compare Character level CNN and ResLSTM for Sanskrit language modeling tasks.
 * Apply stateful LSTM and compare.
 
 
