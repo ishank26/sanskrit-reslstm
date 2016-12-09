@@ -58,4 +58,4 @@ Residual connection[[1]](#resnet) in the model will aid in learning simple aksha
 [2]Graves, A., & Schmidhuber, J. (2005). Framewise phoneme classification with bidirectional LSTM and other neural network architectures. Neural Networks, 18(5), 602-610.
 
 
-*Please feel free to contact me at ishak269[at]gmail.com to report any issues.*
+*Please feel free to contact me at ishank269[at]gmail.com to report any issues.*
