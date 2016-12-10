@@ -33,7 +33,7 @@ Residual connection[[1]](#resnet) in the model will aid in learning simple aksha
 </p>
 
 ### Requirements:
-* Thenao
+* Theano
 * Keras
 
 ### Usage:
