@@ -1,5 +1,5 @@
 # LSTM with residual connection
-A model to generate sanskrit text and learn reprenstations of sankrit aksharas(unit of graphemic symbols in the Indian writing system). 
+A neural network model to generate sanskrit text and learn reprenstations of sankrit aksharas(unit of graphemic symbols in the Indian writing system). 
 
 ### Hypothesis: 
 Sanskrit is a finely structured language. Minor variations in aksharas change the meaning of the words. Composition and translation of Sanskrit texts is still a challenging  task due to the semantic perplexity in its beautiful and rich verses. Refer to the following examples-
