@@ -33,8 +33,8 @@ Residual connection[[1]](#resnet) in the model will aid in learning simple aksha
 </p>
 
 ### Requirements:
+* Keras < 1.0
 * Theano
-* Keras
 
 ### Usage:
 `python reslstm.py`
