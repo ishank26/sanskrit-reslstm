@@ -33,20 +33,23 @@ Residual connection[[1]](#resnet) in the model will aid in learning simple aksha
 </p>
 
 ### Requirements:
-* Keras =< 0.3.3 ([Download](https://github.com/fchollet/keras/releases?after=1.0.3))
+* Keras 
 * Theano
 
 #### Installation Keras:
 ```
-cd to Keras dir
+pip install git+git://github.com/fchollet/keras.git --upgrade --no-deps
 
+or 
+
+cd to Keras download dir
 $ sh
 $ sudo python setup.py install
 ```
 
-
 ### Usage:
-`python reslstm.py`
+* Keras =< 0.3.3 `$ python reslstm.py`
+* Keras >= 1.0.0 `$ python nw_reslstm.py`
 
 #### To use pretrained weights:
 * Remove layers weight intializations.
