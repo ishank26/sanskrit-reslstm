@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*
 import os
 import pickle
-from keras.models import Graph
+#from keras.models import Graph # keras < 1.0.0
 from keras.layers.core import Dropout, Dense
 from keras.layers.wrappers import TimeDistributed
 from keras.layers.recurrent import LSTM
@@ -13,18 +13,19 @@ import numpy as np
 import codecs
 from keras.utils.visualize_util import plot
 
-#### for devanagari text ###
+#### for devanagari text, reload system failsafe! ###
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 ############################
 
+
 np.random.seed(1707)
 
 seq_length = 256  # seq size
 
-##################### input text transform ##########################
 
+##################### input text transform ##########################
 
 def prepareData(path):
     # read input text
@@ -154,7 +155,7 @@ model.add_node(Dropout(0.5), input='fc1', name='drop3')
 model.add_node(TimeDistributed(Dense(train_char, activation='softmax',
                                      init='orthogonal')), inputs=['drop3', 'input'], merge_mode='sum', name='fc2')
 model.add_output(input='fc2', name='output')
-# model.load_weights("weights/weights_file.h5")
+model.load_weights("weights/weights_mal_nwreslstm5_adam_noep59_batch128_seq_256_loss0.566441147595.h5")
 
 
 ############## Optimizer ############
@@ -209,15 +210,11 @@ char_to_index = dict((c, i) for i, c in enumerate(charset))
 index_to_char = dict((i, c) for i, c in enumerate(charset))
 
 # Encodes char input to index
-
-
 def encode_seed(seed, out):
     for i, c in enumerate(seed):
         out[0, i, char_to_index[c]] = 1
 
 # Sampling function
-
-
 def sample(a, temperature):
     a = np.asarray(a).astype('float64')
     a = np.log(a) / temperature
@@ -247,7 +244,7 @@ def generate_text(model, diversity, seed, seq_count=seq_length):
         encode_seed(out, hot_vec)
     return out
 
-# take seed value from user
+# Take seed value from user
 seed = ['संजय', 'धृतराष्ट्']
 
 
