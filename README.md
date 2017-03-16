@@ -68,7 +68,7 @@ $ sudo python setup.py install
 [1]He, K., Zhang, X., Ren, S., & Sun, J. (2016). Identity mappings in deep residual networks. arXiv preprint arXiv:1603.05027.
 
 <a id="lstm">
-[2]Graves, A., & Schmidhuber, J. (2005). Framewise phoneme classification with bidirectional LSTM and other neural network architectures. Neural Networks, 18(5), 602-610.
+[2]Graves, A., & Schmidhuber, J. (2005). Framewise phoneme classification with bidirectional LSTM and other neural network architectures. Neural Networks, 18(5), 602-610.  
 
 
-*Please feel free to contact me at ishank269[at]gmail.com to report any issues.*
+*Please feel free to contact me at ishank269[at]gmail.com to report any issues. Thanks [Bhavin](https://www.facebook.com/bhavin.panchal6878) for pointing out the bugs.*
