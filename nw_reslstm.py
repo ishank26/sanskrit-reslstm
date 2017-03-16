@@ -172,13 +172,13 @@ plot(model, to_file='nw_reslstm.png')
 
 ############ Fit model ############
 history = History()
-print('Fitting model')
-model.fit(X_train, y_train, batch_size=batch, nb_epoch=no_epochs, validation_split=0.3,
-          callbacks=[history, early_stopping, checkpoint, decay_sch, lr_print])
+#print('Fitting model')
+#model.fit(X_train, y_train, batch_size=batch, nb_epoch=no_epochs, validation_split=0.3,
+#          callbacks=[history, early_stopping, checkpoint, decay_sch, lr_print])
 
 
 ######## Evaluate model ###############
-print('Testing model')
+'''print('Testing model')
 score = model.evaluate(X_train, y_train, batch_size=batch)
 print 'Loss:{}, Test accuracy:{}'.format(score[0], score[1])
 
@@ -196,7 +196,7 @@ with open('logs/nw_reslstm.txt', 'a') as log:
     log.write('\n\nloss:{0}\nacc:{1}\nval_loss:{2}\nval_acc:{3}\ntest loss:{4}\ntest accuracy:{5}\nlr:{6}'
               .format(history.history['loss'], history.history['acc'], history.history['val_loss'], history.history['val_acc'], score[0], score[1], model.optimizer.lr.get_value()))
 
-
+'''
 #os.system('shutdown now -h') # uncomment to shutdown system after training completion.
 
 
@@ -235,10 +235,10 @@ def generate_text(model, diversity, seed, seq_count=seq_length):
     # iterate over seq.
     # print hot_vec.shape
     while len(out) < seq_count:
-        # make prob dist over predicted characters
+        # make probability distribution (prob dist) over predicted characters
         prob_dist = model.predict({str(model.input.name): hot_vec}, verbose=0)
         # sample char index using prob dist
-        prob_dist = prob_dist['output'][0][len(out) - 1]
+        prob_dist = prob_dist[0][len(out) - 1]
         char = index_to_char[sample(prob_dist, diversity)]
         # add char to seed
         out += char

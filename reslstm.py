@@ -233,10 +233,10 @@ def generate_text(model, diversity, seed, seq_count=seq_length):
     # iterate over seq.
     # print hot_vec.shape
     while len(out) < seq_count:
-        # make prob dist over predicted characters
+        # make probability distribution (prob dist) over predicted characters
         prob_dist = model.predict({str(model.input.name): hot_vec}, verbose=0)
         # sample char index using prob dist
-        prob_dist = prob_dist['output'][0][len(out) - 1]
+        prob_dist = prob_dist[0][len(out) - 1]
         char = index_to_char[sample(prob_dist, diversity)]
         # add char to seed
         out += char
