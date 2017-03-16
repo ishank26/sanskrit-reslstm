@@ -63,7 +63,7 @@ $ sudo python setup.py install
 
 
 
-####Citations:
+#### Citations:
 <a id="resnet">
 [1]He, K., Zhang, X., Ren, S., & Sun, J. (2016). Identity mappings in deep residual networks. arXiv preprint arXiv:1603.05027.
 
