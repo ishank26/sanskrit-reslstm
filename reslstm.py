@@ -200,7 +200,7 @@ with open('logs/nw_reslstm.txt', 'a') as log:
 
 ########## Generate text ###########
 
-with codecs.open(str('maha_lng.txt'), encoding='utf-8') as f:
+with codecs.open(str('data/maha_lng.txt'), encoding='utf-8') as f:
     text = f.read()
 
 text = text.encode('utf-8')
