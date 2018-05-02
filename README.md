@@ -26,7 +26,7 @@ He sees.***
 
 Residual connection[[1]](#resnet) in the model will aid in learning simple aksharas mappings, whereas LSTM[[2]](#lstm) cells will learn complex relationships. 
 
-*Note: This model was trained on Nvidia GeForce GT 730 using Chapter-7 of Mahabharata ~ 677972 characters. If you've more computation resources, you can use bigger training corpus.*
+*Note: This model was trained on Nvidia GeForce GT 730 using Chapter-7 of Mahabharata ~ 677972 characters.*
 
 <p align="center">
 <img src="model.png">
